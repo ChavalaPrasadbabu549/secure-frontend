@@ -17,8 +17,8 @@ interface UpdateuserProps {
   onClose: () => void;
 }
 
+
 const Updateuser: React.FC<UpdateuserProps> = ({ user, onSuccess, onClose }) => {
-  console.log(user, "user")
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
   const [password, setPassword] = useState(user.password);

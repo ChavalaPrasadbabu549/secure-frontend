@@ -8,7 +8,7 @@ import CommonDialog from '@/components/CommonDialog';
 import Updateuser from '@/components/Updateuser';
 
 interface User {
-    _id: string,
+    id: string,
     name: string,
     email: string,
     password: string,
@@ -45,7 +45,7 @@ const Dashboard = () => {
 
     return (
         <div className="pl-4 pr-4 pt-14">
-            <Navbar />
+            <Navbar name={user?.name} />
             {loading ? (
                 <div className="flex justify-center items-center">
                     <Loader2Icon className="animate-spin w-6 h-6" />
@@ -72,7 +72,12 @@ const Dashboard = () => {
             >
                 {user && (
                     <Updateuser
-                        user={user}
+                        user={{
+                            id: user.id,
+                            name: user.name,
+                            email: user.email,
+                            password: user.password,
+                        }}
                         onSuccess={fetchUser}
                         onClose={() => setIsDialogOpen(false)}
 

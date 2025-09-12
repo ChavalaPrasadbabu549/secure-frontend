@@ -7,7 +7,7 @@ import { useState } from "react";
 
 
 function App() {
-  const [triggerRefresh, setTriggerRefresh] = useState<number | null>(null);
+  const [_triggerRefresh, setTriggerRefresh] = useState<number | null>(null);
   const token = localStorage.getItem("token");
 
   let authenticated = false;

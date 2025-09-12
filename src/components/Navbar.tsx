@@ -1,4 +1,4 @@
-import { Bell, LogOut, Home } from "lucide-react";
+import { LogOut, Home } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 
@@ -6,10 +6,8 @@ interface NavbarProps {
     name?: string;
 }
 
-
-
 const Navbar = ({ name }: NavbarProps) => {
-    const displayName = name || localStorage.getItem("name") || "User";
+    const displayName = name || "User";
     const navigate = useNavigate();
 
     const handleLogout = () => {

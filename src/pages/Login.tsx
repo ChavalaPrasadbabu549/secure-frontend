@@ -89,7 +89,6 @@ const Login: React.FC<LoginProps> = ({ setTriggerRefresh = null }) => {
                 toast.success(response?.data?.message);
                 setOpen(false);
                 localStorage.setItem("token", response?.data?.data?.token);
-                localStorage.setItem("name", response?.data?.data?.name);
                 updateToken(response?.data?.data?.token);
                 navigate("/dashboard");
                 if (setTriggerRefresh) setTriggerRefresh(prev => (prev ?? 0) + 1);
