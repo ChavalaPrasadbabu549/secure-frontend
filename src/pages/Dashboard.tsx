@@ -47,8 +47,8 @@ const Dashboard = () => {
         <div className="pl-4 pr-4 pt-14">
             <Navbar name={user?.name} />
             {loading ? (
-                <div className="flex justify-center items-center">
-                    <Loader2Icon className="animate-spin w-6 h-6" />
+                <div className="flex justify-center items-center h-100">
+                    <Loader2Icon className="animate-spin w-10 h-10" />
                 </div>
             ) : (
                 user && (

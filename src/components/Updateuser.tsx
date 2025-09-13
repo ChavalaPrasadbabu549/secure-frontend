@@ -76,7 +76,7 @@ const Updateuser: React.FC<UpdateuserProps> = ({ user, onSuccess, onClose }) => 
         {updating ? (
           <Loader2Icon className="animate-spin" />
         ) : (
-          "Login"
+          "Update"
         )}
       </Button>
     </form>
